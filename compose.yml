@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  transformers-notebook:
+    build: ./
+    image: transformers-notebook:latest
+    ports:
+      - "8000:8888"
+    environment:
+      - JUPYTER_TOKEN=ferdogan
+    volumes:
+      - ./:/home/jovyan
